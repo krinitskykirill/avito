@@ -1,12 +1,14 @@
-import s from './App.module.scss'
+import Header from './components/Header/Header.tsx';
+import './App.scss';
 
-function App() {
-
+const App = () => {
     return (
-        <main className={s.main}>
-            <div className={s.container}></div>
-        </main>
-    )
-}
+        <div className="app">
+            <Header/>
+            <div className="main">
+            </div>
+        </div>
+    );
+};
 
-export default App
+export default App;

@@ -1,0 +1,12 @@
+@import "fonts";
+@import "variables";
+@import "mixins";
+@import "reset";
+
+body {
+  font-family: $roboto;
+  background-color: $white;
+  color: $black;
+  letter-spacing: 0;
+  text-align: center;
+}

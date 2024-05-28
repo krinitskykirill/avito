@@ -1,3 +1,56 @@
+@mixin transform($transform) {
+  -webkit-transform: $transform;
+  -moz-transform: $transform;
+  -ms-transform: $transform;
+  -o-transform: $transform;
+  transform: $transform;
+}
+
+@mixin transition($transition) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
+
+@mixin animation($name, $duration, $timing-function: ease, $delay: 0s, $iteration-count: 1, $direction: normal) {
+  -webkit-animation-name: $name;
+  -moz-animation-name: $name;
+  -o-animation-name: $name;
+  animation-name: $name;
+
+  -webkit-animation-duration: $duration;
+  -moz-animation-duration: $duration;
+  -o-animation-duration: $duration;
+  animation-duration: $duration;
+
+  -webkit-animation-timing-function: $timing-function;
+  -moz-animation-timing-function: $timing-function;
+  -o-animation-timing-function: $timing-function;
+  animation-timing-function: $timing-function;
+
+  -webkit-animation-delay: $delay;
+  -moz-animation-delay: $delay;
+  -o-animation-delay: $delay;
+  animation-delay: $delay;
+
+  -webkit-animation-iteration-count: $iteration-count;
+  -moz-animation-iteration-count: $iteration-count;
+  -o-animation-iteration-count: $iteration-count;
+  animation-iteration-count: $iteration-count;
+
+  -webkit-animation-direction: $direction;
+  -moz-animation-direction: $direction;
+  -o-animation-direction: $direction;
+  animation-direction: $direction;
+}
+
+@mixin box-shadow($shadow...) {
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
+
 @mixin flexbox {
   display: -webkit-box;
   display: -moz-box;
@@ -165,28 +218,8 @@
   align-self: $value;
 }
 
-@mixin column-space-between {
-  @include flexbox;
-  @include flex-direction(column);
-  @include align-items(space-between);
-}
-
-@mixin row-center-space-between {
-  @include flexbox;
-  @include flex-direction(row);
-  @include justify-content(space-between);
-  @include align-items(center);
-}
-
-@mixin column-center {
-  @include flexbox;
-  @include justify-content(center);
-  @include align-items(center);
-  @include flex-direction(column);
-}
-
-@mixin center-align-justify {
-  @include flexbox;
-  @include justify-content(center);
-  @include align-items(center);
+@mixin justify-self($value) {
+  -webkit-box-pack: $value;
+  -moz-box-pack: $value;
+  justify-self: $value;
 }

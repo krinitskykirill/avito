@@ -1,0 +1,36 @@
+<svg width="48.000000" height="48.000000" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <desc>
+        Created with Pixso.
+    </desc>
+    <defs>
+        <clipPath id="clip22_1427">
+            <rect id="sibdev-logo" width="48.000000" height="48.000000" fill="white" fill-opacity="0"/>
+        </clipPath>
+        <linearGradient x1="42.089943" y1="-0.000355" x2="4.063688" y2="19.179535" id="paint_linear_22_1428_0" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#35A2EC" stop-opacity="0.000000"/>
+            <stop offset="0.506638" stop-color="#35A2EC"/>
+            <stop offset="1.000000" stop-color="#35A2EC" stop-opacity="0.000000"/>
+        </linearGradient>
+        <linearGradient x1="42.089958" y1="9.732071" x2="4.063707" y2="28.923450" id="paint_linear_22_1429_0" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#35A2EC" stop-opacity="0.000000"/>
+            <stop offset="0.506638" stop-color="#35A2EC"/>
+            <stop offset="1.000000" stop-color="#35A2EC" stop-opacity="0.000000"/>
+        </linearGradient>
+        <linearGradient x1="42.089981" y1="18.964489" x2="4.063721" y2="38.158730" id="paint_linear_22_1430_0" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#35A2EC" stop-opacity="0.000000"/>
+            <stop offset="0.506638" stop-color="#1390E5"/>
+            <stop offset="1.000000" stop-color="#35A2EC" stop-opacity="0.000000"/>
+        </linearGradient>
+        <linearGradient x1="42.089966" y1="28.708637" x2="4.063709" y2="47.879883" id="paint_linear_22_1431_0" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#35A2EC" stop-opacity="0.000000"/>
+            <stop offset="0.506638" stop-color="#1390E5"/>
+            <stop offset="1.000000" stop-color="#35A2EC" stop-opacity="0.000000"/>
+        </linearGradient>
+    </defs>
+    <rect id="sibdev-logo" width="48.000000" height="48.000000" fill="#FFFFFF" fill-opacity="0"/>
+    <g clip-path="url(#clip22_1427)">
+        <path id="Path 7" d="M32.26 23.76L13.46 33.24L13.46 43.3L32.26 33.82L32.26 23.76Z" fill="#1390E5" fill-opacity="1.000000" fill-rule="evenodd"/>
+        <path id="Path 7" d="M13.46 14.27L32.26 23.76L32.26 33.82L13.46 24.33L13.46 14.27Z" fill="#1180CB" fill-opacity="1.000000" fill-rule="evenodd"/>
+        <path id="Path 7" d="M32.26 4.79L13.46 14.28L13.46 24.33L32.26 14.85L32.26 4.79Z" fill="#35A2EC" fill-opacity="1.000000" fill-rule="evenodd"/>
+    </g>
+</svg>
