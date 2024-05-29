@@ -3,16 +3,16 @@
 
 .nav {
   &__list {
-    @include flexbox;
-    @include align-items(center);
-    @include justify-content(space-between)
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   &__link {
     padding: 20px 26px;
 
     &:hover {
-      @include transition($transition-duration);
+      transition: $transition-duration;
       color: $light-blue;
     }
   }
@@ -23,7 +23,6 @@
 }
 
 .current {
-  @include transition($transition-duration);
   color: $light-blue;
   position: relative;
   display: inline-block;

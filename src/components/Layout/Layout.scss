@@ -2,9 +2,9 @@
 @import '../../assets/styles/variables';
 
 .header {
-  @include flexbox;
-  @include align-items(center);
-  @include justify-content(center);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   font-size: 18px;
   line-height: 28px;
@@ -13,8 +13,8 @@
 
   &__container {
     width: $content-width;
-    @include flexbox;
-    @include align-items(center);
-    @include justify-content(space-between);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 }
