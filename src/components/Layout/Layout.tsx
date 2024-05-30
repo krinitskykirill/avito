@@ -1,7 +1,7 @@
 import {NavLink, Outlet} from 'react-router-dom'
 import './Layout.scss'
 
-import logo from '../../assets/img/logo.svg'
+import logo from '../../../public/img/logo.svg'
 
 interface IActive {
     isActive: boolean;
