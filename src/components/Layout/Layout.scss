@@ -1,15 +1,16 @@
 @import '../../assets/styles/mixins';
 @import '../../assets/styles/variables';
+@import '../../assets/styles/functions';
 
 .header {
   display: flex;
   align-items: center;
   justify-content: center;
 
-  font-size: 18px;
-  line-height: 28px;
+  font-size: 1.8rem;
+  line-height: 2.8rem;
   color: $gray;
-  border-bottom: 1px solid $dark-white;
+  border-bottom: 0.1rem solid $dark-white;
 
   &__container {
     width: $content-width;

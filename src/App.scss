@@ -2,11 +2,6 @@
 @import "assets/styles/mixins";
 @import "assets/styles/fonts";
 
-.app{
-  max-width: $max-width;
+.app {
   margin-inline: auto;
-}
-
-.main{
-  width: $content-width
 }

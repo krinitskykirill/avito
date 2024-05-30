@@ -1,16 +1,18 @@
-$dark: #272727;
-$white: #FFF;
-$dark-white: #F1F1F1;
-$light-blue: #35A2EC;
-$opacity-blue: #1390E5;
-$opacity-dark: #171719;
-$dark-blue: #1390E5;
-$gray: #D1D1D1;
-$black: #272727FF;
+@import "functions";
+
+$dark: hsl(0, 0%, 15%);
+$white: hsl(0, 0%, 100%);
+$dark-white: hsl(0, 0%, 95%);
+$light-blue: hsl(204, 83%, 56%);
+$opacity-blue: hsl(203, 85%, 48%);
+$opacity-dark: hsl(240, 5%, 9%);
+$dark-blue: hsl(203, 85%, 48%);
+$gray: hsl(0, 0%, 82%);
+$black: hsl(0, 0%, 15%);
 
 $roboto: 'Roboto', sans-serif;
 
 $transition-duration: 0.2s;
 
-$max-width: 1440px;
-$content-width: 1040px;
+$max-width: 144rem;
+$content-width: 104rem;

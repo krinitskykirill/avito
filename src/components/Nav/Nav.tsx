@@ -17,8 +17,8 @@ const Nav = () => {
             <nav className="nav">
                 <ul className="nav__list">
                     <li className="nav__item">
-                        <NavLink to="/" className={'nav__link logo'}>
-                            <img src={logo} width={48} height={48} alt="logo"/>
+                        <NavLink to="/" className={'nav__link'}>
+                            <img src={logo} className={'logo'} alt="logo"/>
                         </NavLink>
                     </li>
                     <li className="nav__item">
