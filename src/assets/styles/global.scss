@@ -2,19 +2,15 @@
 @import "variables";
 @import "mixins";
 @import "reset";
-@import "functions";
 
-html{
+html {
   font-size: calc(100vw / 1440 * 10);
 
-  @media(max-width: 1024px){
+  @media(max-width: 1024px) {
     font-size: calc(100vw / 768 * 10);
   }
-  @media(max-width: 767px){
-    font-size: calc(100vw / 500 * 10);
-  }
-  @media(max-width: 500px){
-    font-size: calc(100vw / 375 * 10);
+  @media(max-width: 767px) {
+    font-size: calc(100vw / 320 * 10);
   }
 }
 
@@ -24,4 +20,8 @@ body {
   color: $black;
   letter-spacing: 0;
   text-align: center;
+}
+
+a:hover {
+  cursor: pointer;
 }

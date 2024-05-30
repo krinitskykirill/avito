@@ -1,5 +1,3 @@
-@import "functions";
-
 $dark: hsl(0, 0%, 15%);
 $white: hsl(0, 0%, 100%);
 $dark-white: hsl(0, 0%, 95%);
@@ -14,5 +12,6 @@ $roboto: 'Roboto', sans-serif;
 
 $transition-duration: 0.2s;
 
-$max-width: 144rem;
-$content-width: 104rem;
+$content-width-desktop: 104rem;
+$content-width-tablet: 68.8rem;
+$content-width-mobile: 30.4rem;
