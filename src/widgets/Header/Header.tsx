@@ -1,18 +1,18 @@
-import {NavLink, Outlet} from 'react-router-dom'
-import './Layout.scss'
+import {NavLink, Outlet} from 'react-router-dom';
+import './Header.scss';
 
-import logo from '../../../public/img/logo.svg'
+import logo from '../../../public/img/logo.svg';
 
-interface IActive {
+type ActiveProps = {
     isActive: boolean;
 }
 
-const Layout = () => {
-    const setActive = ({isActive}: IActive) => {
+const Header = () => {
+    const setActive = ({isActive}: ActiveProps) => {
         return isActive ?
-            'nav__link current' :
-            'nav__link'
-    }
+            'nav__link--current' :
+            'nav__link';
+    };
 
     return (
         <>
@@ -21,26 +21,27 @@ const Layout = () => {
                     <nav className="nav">
                         <ul className="nav__list">
                             <li className="nav__item">
-                                <NavLink to="/" className={'nav__link--logo'}>
-                                    <img src={logo} className={'logo'}
+                                <NavLink to="/"
+                                         className="nav__link--logo">
+                                    <img src={logo}
+                                         className="nav__logo"
                                          alt="logo"/>
                                 </NavLink>
                             </li>
                             <li className="nav__item">
-                                <NavLink to="/"
-                                         className={setActive}>
+                                <NavLink to="/" className={setActive}>
                                     Поиск
                                 </NavLink>
                             </li>
                             <li className="nav__item">
-                                <NavLink to="/favorites"
-                                         className={setActive}>
+                                <NavLink to="/favorites" className={setActive}>
                                     Избранное
                                 </NavLink>
                             </li>
                         </ul>
                     </nav>
-                    <NavLink to="/logout" className={'nav__link logout'}>
+                    <NavLink to="/logout"
+                             className="nav__link--logout">
                         Выйти
                     </NavLink>
                 </div>
@@ -49,7 +50,7 @@ const Layout = () => {
                 <Outlet/>
             </main>
         </>
-    )
-}
+    );
+};
 
-export default Layout
+export default Header;

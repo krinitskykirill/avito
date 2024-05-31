@@ -1,0 +1,21 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.button {
+  font-size: $form-font-size;
+  line-height: $form-line-height;
+  text-align: center;
+
+  border-radius: $form-border-radius;
+}
+
+.accept {
+  color: $white;
+  background-color: $dark-blue;
+}
+
+.decline {
+  color: $dark-blue;
+  background-color: $white;
+  @include form-border(currentColor);
+}

@@ -2,13 +2,17 @@ $dark: hsl(0, 0%, 15%);
 $white: hsl(0, 0%, 100%);
 $dark-white: hsl(0, 0%, 95%);
 $light-blue: hsl(204, 83%, 56%);
-$opacity-blue: hsl(203, 85%, 48%);
+$opacity-blue: rgba(197, 228, 249, 0.3);
 $opacity-dark: hsl(240, 5%, 9%);
 $dark-blue: hsl(203, 85%, 48%);
 $gray: hsl(0, 0%, 82%);
 $black: hsl(0, 0%, 15%);
 
 $roboto: 'Roboto', sans-serif;
+$form-font-size: 2rem;
+$form-line-height: 2.4rem;
+
+$form-border-radius: 1rem;
 
 $transition-duration: 0.2s;
 

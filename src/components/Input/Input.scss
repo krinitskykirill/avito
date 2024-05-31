@@ -1,0 +1,24 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.input {
+
+  font-size: $form-font-size;
+  line-height: $form-line-height;
+
+  @include form-border($gray);
+  border-radius: $form-border-radius;
+
+  color: $black;
+  background-color: $white;
+  caret-color: $black;
+}
+
+.input::placeholder {
+  color: $gray;
+}
+
+.input:focus {
+  background-color: $opacity-blue;
+  @include form-border($dark-blue);
+}
