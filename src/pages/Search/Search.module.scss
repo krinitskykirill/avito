@@ -1,0 +1,20 @@
+@import "@assets/styles/variables";
+@import "@assets/styles/mixins";
+
+.search {
+    width: $content-width-desktop;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 1024px) {
+  .search {
+      width: $content-width-tablet;
+  }
+}
+
+@media (max-width: 767px) {
+  .search {
+      width: $content-width-mobile;
+  }
+}

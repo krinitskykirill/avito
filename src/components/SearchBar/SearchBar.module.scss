@@ -1,0 +1,45 @@
+@import "@assets/styles/mixins";
+@import "@assets/styles/variables";
+
+
+.search__bar {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding-top: 15rem;
+}
+
+.title {
+  font-size: 3.6rem;
+  line-height: 5.2rem;
+}
+
+.input {
+  width: 53.6rem;
+  height: 5.2rem;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right: none;
+}
+
+.button {
+  width: 15rem;
+  height: 5.2rem;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left: none;
+}
+
+
+@media (max-width: 767px) {
+
+  .input {
+    width: 21.3rem;
+    font-size: 1.6rem;
+  }
+
+  .button {
+    width: 9.1rem;
+    font-size: 1.6rem;
+  }
+}

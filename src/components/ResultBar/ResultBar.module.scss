@@ -1,0 +1,49 @@
+@import "@assets/styles/variables";
+
+.result__bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.title {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  @media (max-width: 767px) {
+    font-size: 1.2rem;
+  }
+}
+
+.request {
+  font-weight: 500;
+}
+
+.count {
+  padding-left: 1.5rem;
+  color: $gray;
+  @media (max-width: 767px) {
+    padding-left: 0;
+    display: block;
+    text-align: left;
+  }
+}
+
+.switchers {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.switcher {
+  padding: 0;
+}
+
+.icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  filter: invert(1);
+}
+
+.current {
+  filter: invert(0);
+}

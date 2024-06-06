@@ -1,0 +1,94 @@
+@import "@assets/styles/variables";
+
+.item__grid {
+  width: 21.6rem;
+  @media (max-width: 767px) {
+    width: 30.3rem;
+  }
+}
+
+.item__list {
+  width: 68.7rem;
+  height: 8.8rem;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  margin-bottom: 3.2rem;
+  @media (max-width: 767px) {
+    width: 30.4rem;
+    height: 7.2rem;
+    margin-bottom: 2.4rem;
+  }
+}
+
+.video__grid {
+  height: 13.8rem;
+  @media (max-width: 767px) {
+    width: 30.3rem;
+  }
+}
+
+.video__list {
+  width: 15.7rem;
+  height: 8.8rem;
+  @media (max-width: 767px) {
+    width: 12rem;
+    height: 7.2rem;
+  }
+}
+
+.list__desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @media (max-width: 767px) {
+    width: 16.9rem;
+  }
+
+}
+
+.title__grid {
+  color: $black;
+  font-size: $item-font-size;
+  font-weight: 500;
+  line-height: $item-line-height;
+  text-align: left;
+  padding-top: 0.8rem;
+}
+
+.title__list {
+  @extend .title__grid;
+  line-height: 2rem;
+  padding-top: 0;
+}
+
+.channel__grid {
+  color: $gray;
+  font-size: $item-font-size;
+  font-weight: 400;
+  line-height: $item-line-height;
+  text-align: left;
+  padding-top: 0.8rem;
+}
+
+.channel__list {
+  @extend .channel__grid;
+  line-height: 2rem;
+  padding-top: 0;
+  @media (max-width: 767px) {
+    font-size: 1.2rem;
+  }
+}
+
+.views__grid {
+  @extend .channel__grid;
+  padding-top: 0;
+}
+
+.views__list {
+  @extend .channel__grid;
+  padding-top: 0;
+  @media (max-width: 767px) {
+    font-size: 1.2rem;
+  }
+}

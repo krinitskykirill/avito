@@ -1,0 +1,12 @@
+@import "@assets/styles/variables";
+@import "@assets/styles/mixins";
+@import "@assets/styles/fonts";
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 100vh;
+}

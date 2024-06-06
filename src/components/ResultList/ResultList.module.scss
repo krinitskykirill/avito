@@ -1,0 +1,22 @@
+.result__list{
+  width: 100%;
+  padding-block: 2rem;
+}
+
+.list{
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+.grid{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  @media (max-width: 767px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

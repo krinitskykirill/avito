@@ -1,8 +1,8 @@
-import React from 'react';
-import './Button.scss';
+import React from 'react'
+import cls from './Button.module.scss'
 
 type ButtonProps = {
-    isAccept: boolean,
+    isAccept: boolean;
     className: string;
     style?: React.CSSProperties;
     onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
@@ -11,36 +11,29 @@ type ButtonProps = {
     children?: React.ReactNode;
 };
 
-const Button = ({
-                    isAccept,
-                    className,
-                    style,
-                    onClick,
-                    disabled,
-                    type = 'button',
-                    children,
-                }: ButtonProps) => {
+const getClassName = (className: string = '', isAccept: boolean) => {
+    const baseClass = isAccept ? cls.accept : cls.decline
+    return `${className} ${baseClass} ${cls.button}`.trim()
+}
 
-    const setClassName = (className: string = '',
-                          isAccept: boolean) => {
-        return (className ?
-            className :
-            '') + (isAccept ?
-            ' accept button' :
-            ' decline button');
-    };
+const Button: React.FC<ButtonProps> = ({
+                                           isAccept,
+                                           className,
+                                           style,
+                                           onClick,
+                                           disabled = false,
+                                           type = 'button',
+                                           children,
+                                       }) => (
+    <button
+        className={getClassName(className, isAccept)}
+        style={style}
+        onClick={onClick}
+        disabled={disabled}
+        type={type}
+    >
+        {children}
+    </button>
+)
 
-    return (
-        <button
-            className={setClassName(className, isAccept)}
-            style={style}
-            onClick={onClick}
-            disabled={disabled}
-            type={type}
-        >
-            {children}
-        </button>
-    );
-};
-
-export default Button;
+export default Button

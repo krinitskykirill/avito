@@ -1,8 +1,8 @@
-@import "src/styles/variables";
-@import "src/styles/mixins";
+@import "@assets/styles/variables";
+@import "@assets/styles/mixins";
 
 .input {
-
+  
   font-size: $form-font-size;
   line-height: $form-line-height;
 
@@ -12,6 +12,8 @@
   color: $black;
   background-color: $white;
   caret-color: $black;
+
+  padding: 1.4rem 1.5rem;
 }
 
 .input::placeholder {
