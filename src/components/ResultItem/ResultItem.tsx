@@ -1,72 +1,78 @@
 import React from 'react'
-
-import video from '@assets/img/video.svg'
+import he from 'he'
+import videoDesktop from '@assets/img/video.svg'
 import videoMobile from '@assets/img/video-mobile.svg'
 
 import cls from './ResultItem.module.scss'
 import useWindowWidth from '@/hooks/useWindowWidth.ts'
+import {VideoCard} from '@/redux/videoSlice.ts'
+import {
+    createVideoLink,
+    formatViewCount,
+    getMaxLength,
+    truncate,
+} from '@components/ResultItem/utils.ts'
 
 type ResultItemProps = {
-    switcher: boolean;
+    isGrid: boolean;
+    video: VideoCard;
 };
 
-const truncate = (text: string, maxLength: number): string => {
-    return text.length > maxLength ? text.slice(0, maxLength) + '...' : text
-}
+const ResultItem: React.FC<ResultItemProps> = ({isGrid, video}) => {
+    const currentWidth = useWindowWidth()
 
-const getMaxLength = (isMobile: boolean, switcher: boolean): number => {
-    if (isMobile && switcher) return 77
-    if (isMobile) return 39
-    if (switcher) return 56
-    return Infinity
-}
+    const videoLink = createVideoLink(video.id)
 
-const ResultItem: React.FC<ResultItemProps> = ({switcher}) => {
-    const isMobile = useWindowWidth() <= 768
+    const title =
+        truncate(he.decode(video.title),
+            getMaxLength(currentWidth, isGrid))
 
-    const title = 'Как кормить кошку натуралкой | Перечень полезных для кошек продуктов и советы по составлению рациона'
-    const channel = 'Ветеринария и Кормление собак и кошек'
-    const views = '786 тыс. просмотров'
+    const channel = truncate(he.decode(video.channelTitle),
+        currentWidth ? 23 : isGrid ? 27 : Infinity)
 
-    const truncatedTitle = truncate(title, getMaxLength(isMobile, switcher))
-    const truncatedChannel = truncate(channel,
-        isMobile ? 23 : switcher ? 27 : Infinity)
+    const views = video.viewCount ?
+        formatViewCount(Number(video.viewCount)) :
+        ''
 
-    const containerClass = switcher ? cls.item__grid : cls.item__list
-    const videoClass = switcher ? cls.video__grid : cls.video__list
-    const titleClass = switcher ? cls.title__grid : cls.title__list
-    const channelClass = switcher ? cls.channel__grid : cls.channel__list
-    const viewsClass = switcher ? cls.views__grid : cls.views__list
-    const descClass = switcher ? '' : cls.list__desc
+    const containerClass = isGrid ? cls.item__grid : cls.item__list
+    const videoClass = isGrid ? cls.video__grid : cls.video__list
+    const titleClass = isGrid ? cls.title__grid : cls.title__list
+    const channelClass = isGrid ? cls.channel__grid : cls.channel__list
+    const viewsClass = isGrid ? cls.views__grid : cls.views__list
+    const descClass = isGrid ? '' : cls.list__desc
 
-    const imageSrc = switcher && isMobile ? videoMobile : video
+    const imageSrc = video.thumbnailUrl
+        ? video.thumbnailUrl
+        : (isGrid && currentWidth ? videoMobile : videoDesktop)
 
     return (
         <div className={containerClass}>
-            <img
-                className={videoClass}
-                src={imageSrc}
-                alt={title}
-            />
-            <div className={descClass}>
-                <h3
-                    className={titleClass}
-                    title={title}
-                >
-                    {truncatedTitle}
-                </h3>
+            <a className={descClass} href={videoLink} target="_blank" rel="noopener noreferrer">
+                <img
+                    className={videoClass}
+                    src={imageSrc}
+                    alt={title}
+                />
                 <div>
-                    <p
-                        className={channelClass}
-                        title={channel}
+                    <h3
+                        className={titleClass}
+                        title={title}
                     >
-                        {truncatedChannel}
-                    </p>
-                    <p className={viewsClass}>
-                        {views}
-                    </p>
+                        {title}
+                    </h3>
+                    <div>
+                        <p
+                            className={channelClass}
+                            title={channel}
+                        >
+                            {channel}
+                        </p>
+                        <p className={viewsClass}>
+                            {views}
+                        </p>
+                    </div>
                 </div>
-            </div>
+            </a>
         </div>
     )
 }

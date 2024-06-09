@@ -1,15 +1,16 @@
 @import "@assets/styles/variables";
 
 .item__grid {
-  width: 21.6rem;
+  width: 24.5rem;
+  @media (max-width: 1024px) {
+    width: 21.6rem;
+  }
   @media (max-width: 767px) {
     width: 30.3rem;
   }
 }
 
 .item__list {
-  width: 68.7rem;
-  height: 8.8rem;
   display: flex;
   flex-direction: row;
   gap: 2rem;
@@ -22,6 +23,7 @@
 }
 
 .video__grid {
+  width: 24.5rem;
   height: 13.8rem;
   @media (max-width: 767px) {
     width: 30.3rem;
@@ -37,6 +39,10 @@
   }
 }
 
+.grid__desc {
+  height: 8.5rem;
+}
+
 .list__desc {
   display: flex;
   flex-direction: column;
@@ -44,10 +50,10 @@
   @media (max-width: 767px) {
     width: 16.9rem;
   }
-
 }
 
 .title__grid {
+  height: 3.2rem;
   color: $black;
   font-size: $item-font-size;
   font-weight: 500;
@@ -68,7 +74,7 @@
   font-weight: 400;
   line-height: $item-line-height;
   text-align: left;
-  padding-top: 0.8rem;
+  padding-top: 1.5rem;
 }
 
 .channel__list {

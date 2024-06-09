@@ -1,22 +1,32 @@
 import cls from './ResultList.module.scss'
 import ResultItem from '@components/ResultItem/ResultItem.tsx'
-import React from 'react'
+import React, {ReactNode} from 'react'
+import {useSelector} from 'react-redux'
+import {RootState} from '@/redux/store.ts'
 
 type ResultListProps = {
-    switcher: boolean;
+    isGrid: boolean;
 };
 
-const ResultList: React.FC<ResultListProps> = ({switcher}) => {
-    const renderItems = (count: number) => {
-        return Array.from({length: count}).map((_, index) => (
-            <ResultItem key={index} switcher={switcher}/>
-        ))
-    }
+const ResultList: React.FC<ResultListProps> = ({isGrid}) => {
+
+    const {videos, status} = useSelector((state: RootState) => state.video)
 
     return (
         <div
-            className={`${cls.result__list} ${switcher ? cls.grid : cls.list}`}>
-            {renderItems(12)}
+            className={`${cls.result__list} ${isGrid ? cls.grid : cls.list}`}>
+            {
+                status === 'succeeded' ? (
+                    videos.map((video): ReactNode => (
+                        <ResultItem key={video.id} video={video}
+                                    isGrid={isGrid}/>
+                    ))
+                ) : status === 'loading' ? (
+                    <div>Loading...</div>
+                ) : status === 'failed' ? (
+                    <div>Error loading videos</div>
+                ) : null
+            }
         </div>
     )
 }

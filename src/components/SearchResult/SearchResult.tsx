@@ -5,21 +5,21 @@ import ResultList from '../ResultList/ResultList.tsx'
 
 const SearchResult = () => {
 
-    const [switcher, setSwitcher] = useState<boolean>(true)
+    const [isGrid, setIsGrid] = useState<boolean>(true)
 
     const setList = () => {
-        if (!switcher) return
-        setSwitcher(false)
+        if (!isGrid) return
+        setIsGrid(false)
     }
     const setGrid = () => {
-        if (switcher) return
-        setSwitcher(true)
+        if (isGrid) return
+        setIsGrid(true)
     }
 
     return (
         <div className={cls.search__result}>
-            <ResultBar setList={setList} setGrid={setGrid} switcher={switcher}/>
-            <ResultList switcher={switcher}/>
+            <ResultBar setList={setList} setGrid={setGrid} isGrid={isGrid}/>
+            <ResultList isGrid={isGrid}/>
         </div>
     )
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import cls from './Button.module.scss'
 
-type ButtonProps = {
+interface ButtonProps {
     isAccept: boolean;
     className: string;
     style?: React.CSSProperties;
@@ -9,7 +9,7 @@ type ButtonProps = {
     disabled?: boolean;
     type?: 'button' | 'submit' | 'reset';
     children?: React.ReactNode;
-};
+}
 
 const getClassName = (className: string = '', isAccept: boolean) => {
     const baseClass = isAccept ? cls.accept : cls.decline

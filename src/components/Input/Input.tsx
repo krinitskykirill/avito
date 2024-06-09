@@ -1,14 +1,15 @@
 import React from 'react'
 import cls from './Input.module.scss'
 
-type InputProps = {
+interface InputProps {
     className: string;
     style?: React.CSSProperties;
     type?: string;
     placeholder?: string;
     value?: string;
     onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
-};
+    onKeyDown?: (e: React.KeyboardEvent<HTMLInputElement>) => void
+}
 
 const getClassName = (className: string = '') => {
     return `${className} ${cls.input}`.trim()
@@ -21,6 +22,7 @@ const Input: React.FC<InputProps> = ({
                                          placeholder = '',
                                          value,
                                          onChange,
+                                         onKeyDown,
                                      }) => (
     <input
         className={getClassName(className)}
@@ -29,6 +31,7 @@ const Input: React.FC<InputProps> = ({
         placeholder={placeholder}
         value={value}
         onChange={onChange}
+        onKeyDown={onKeyDown}
     />
 )
 
