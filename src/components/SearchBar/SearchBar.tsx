@@ -25,13 +25,13 @@ const SearchBar: React.FC = () => {
         }
     }
 
-    const containerClass = status === ('succeeded' || 'loading') ?
+    const containerClass = (status === 'succeeded' || status === 'loading') ?
         cls.search__bar__succeeded :
-        cls.search__bar__idle
+        cls.search__bar__idle;
 
-    const inputClass = status === ('succeeded' || 'loading') ?
+    const inputClass = (status === 'succeeded' || status === 'loading') ?
         cls.input__succeeded :
-        cls.input__idle
+        cls.input__idle;
 
     return (
         <div className={containerClass}>

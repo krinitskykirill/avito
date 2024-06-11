@@ -2,8 +2,8 @@ $dark: hsl(0, 0%, 15%);
 $white: hsl(0, 0%, 100%);
 $dark-white: hsl(0, 0%, 95%);
 $light-blue: hsl(204, 83%, 56%);
-$opacity-blue: rgba(197, 228, 249, 0.3);
-$opacity-dark: hsl(240, 5%, 9%);
+$opacity-blue: hsla(204, 83%, 56%, 0.3);
+$opacity-dark: hsla(240, 4%, 9%, 0.2);
 $dark-blue: hsl(203, 85%, 48%);
 $gray: hsl(0, 0%, 82%);
 $black: hsl(0, 0%, 15%);
@@ -22,4 +22,7 @@ $transition-duration: 0.2s;
 $content-width-desktop: 104rem;
 $content-width-tablet: 68.8rem;
 $content-width-mobile: 30.4rem;
+
+$media-tablet: 1024px;
+$media-mobile: 767px;
 

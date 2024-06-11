@@ -2,7 +2,7 @@
 @import "@assets/styles/mixins";
 
 .input {
-  
+
   font-size: $form-font-size;
   line-height: $form-line-height;
 
@@ -17,7 +17,7 @@
 }
 
 .input::placeholder {
-  color: $gray;
+  color: $opacity-dark;
 }
 
 .input:focus {

@@ -1,14 +1,14 @@
-.result__list{
+.result__list {
   width: 100%;
   padding-block: 2rem;
 }
 
-.list{
+.list {
   flex-direction: column;
   gap: 3.2rem;
 }
 
-.grid{
+.grid {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -19,4 +19,9 @@
     justify-content: center;
     align-items: center;
   }
+}
+
+.notfound {
+  font-weight: 500;
+  font-size: 1.6rem;
 }

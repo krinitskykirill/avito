@@ -2,14 +2,9 @@
   border: 0.2rem solid $color;
 }
 
-@mixin flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-@mixin flex-center-sb {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+@mixin truncate($lines: 1) {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
 }
