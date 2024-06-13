@@ -5,7 +5,7 @@ interface PreloadedItem {
   isGrid: boolean;
 }
 
-const PreloaderItem: React.FC<PreloadedItem> = ({ isGrid }) => {
+export const PreloaderItem: React.FC<PreloadedItem> = ({ isGrid }) => {
   const containerClass = isGrid ? cls.item__grid : cls.item__list;
   const thumbClass = isGrid ? cls.thumb__grid : cls.thumb__list;
   const titleClass = isGrid ? cls.title__grid : cls.title__list;
@@ -26,5 +26,3 @@ const PreloaderItem: React.FC<PreloadedItem> = ({ isGrid }) => {
     </div>
   );
 };
-
-export default PreloaderItem;

@@ -2,14 +2,14 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { RootState } from "@/redux/store.ts";
 import cls from "./ResultList.module.scss";
-import ResultItem from "@components/ResultItem/ResultItem.tsx";
-import PreloaderItem from "@components/PreloaderItem/PreloaderItem.tsx";
+import { ResultItem } from "@components/ResultItem/ResultItem.tsx";
+import { PreloaderItem } from "@components/PreloaderItem/PreloaderItem.tsx";
 
 type ResultListProps = {
   isGrid: boolean;
 };
 
-const ResultList: React.FC<ResultListProps> = ({ isGrid }) => {
+export const ResultList: React.FC<ResultListProps> = ({ isGrid }) => {
   const { videos, status } = useSelector((state: RootState) => state.video);
 
   return (
@@ -34,5 +34,3 @@ const ResultList: React.FC<ResultListProps> = ({ isGrid }) => {
     </div>
   );
 };
-
-export default ResultList;

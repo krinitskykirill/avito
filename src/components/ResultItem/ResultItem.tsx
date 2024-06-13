@@ -16,7 +16,7 @@ interface ResultItemProps {
   video: VideoCard;
 }
 
-const ResultItem: React.FC<ResultItemProps> = ({ isGrid, video }) => {
+export const ResultItem: React.FC<ResultItemProps> = ({ isGrid, video }) => {
   const currentWidth = useWindowWidth();
 
   const videoLink = createVideoLink(video.id);
@@ -59,5 +59,3 @@ const ResultItem: React.FC<ResultItemProps> = ({ isGrid, video }) => {
     </a>
   );
 };
-
-export default ResultItem;

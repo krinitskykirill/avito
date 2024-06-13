@@ -1,9 +1,9 @@
-const Login = () => {
-    return (
-        <div>
-            <h1>Auth</h1>
-        </div>
-    );
+import React from "react";
+
+interface LoginProps {}
+
+const Login: React.FC<LoginProps> = () => {
+  return <div>Login</div>;
 };
 
 export default Login;

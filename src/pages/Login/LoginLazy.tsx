@@ -1,3 +1,3 @@
-import {lazy} from 'react';
+import { lazy } from "react";
 
-export const LoginLazy = lazy(() => import('./Login.tsx'));
+export const LoginLazy = lazy(() => import("./Login.tsx"));

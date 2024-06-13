@@ -6,13 +6,17 @@ import gridIcon from "@assets/img/grid.svg";
 import { useSelector } from "react-redux";
 import { RootState } from "@/redux/store.ts";
 
-type ResultBarProps = {
+interface ResultBarProps {
   setList: () => void;
   setGrid: () => void;
   isGrid: boolean;
-};
+}
 
-const ResultBar: React.FC<ResultBarProps> = ({ setList, setGrid, isGrid }) => {
+export const ResultBar: React.FC<ResultBarProps> = ({
+  setList,
+  setGrid,
+  isGrid,
+}) => {
   const { videos, status } = useSelector((state: RootState) => state.video);
 
   if (status !== "succeeded") return null;
@@ -52,5 +56,3 @@ const ResultBar: React.FC<ResultBarProps> = ({ setList, setGrid, isGrid }) => {
     </div>
   );
 };
-
-export default ResultBar;
