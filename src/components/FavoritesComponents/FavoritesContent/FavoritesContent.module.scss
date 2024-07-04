@@ -1,0 +1,63 @@
+@import "@assets/styles/variables";
+
+.list__container {
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  padding-top: 4rem;
+  padding-bottom: 8rem;
+
+  .item:first-child {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+  }
+
+  .item:last-child {
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: inherit;
+  background-color: $white;
+  height: 4.7rem;
+  padding: 1.4rem 2rem;
+  border-bottom: 0.1rem solid $gray;
+
+  &:hover .buttons {
+    display: flex;
+  }
+}
+
+.link {
+  width: inherit;
+  text-align: left;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.buttons {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+
+  button {
+    background: none;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1.4rem;
+    cursor: pointer;
+  }
+
+  .delete {
+    color: $red;
+  }
+
+  .edit {
+    color: $dark-blue;
+  }
+}

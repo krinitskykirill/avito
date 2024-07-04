@@ -1,4 +1,4 @@
-@import "@assets/styles/variables";
+@import '@assets/styles/variables';
 @import "@assets/styles/mixins";
 
 .input {
@@ -13,7 +13,7 @@
   background-color: $white;
   caret-color: $black;
 
-  padding: 1.4rem 1.5rem;
+  padding: 1.4rem 5.4rem 1.4rem 1.5rem;
 }
 
 .input::placeholder {

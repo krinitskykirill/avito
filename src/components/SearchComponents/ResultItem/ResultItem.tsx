@@ -4,7 +4,7 @@ import useWindowWidth from "@/hooks/useWindowWidth.ts";
 import {
   createVideoLink,
   formatViewCount,
-} from "@components/ResultItem/utils.ts";
+} from "@components/SearchComponents/ResultItem/utils.ts";
 import { VideoCard } from "@/redux/videoSlice.ts";
 
 import videoDesktop from "@assets/img/video.svg";

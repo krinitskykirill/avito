@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
 export interface VideoCard {
-  query: string;
+  queryState: string;
   id: string;
   title: string;
   channelTitle: string;
@@ -21,10 +21,10 @@ const YOUTUBE_API_KEY = "AIzaSyBmo4wmh4lZcJaQlthTh7Oq2hJ4UPE6HWw";
 export const fetchVideos = createAsyncThunk(
   "video/fetchVideos",
   async ({
-    query,
+    queryState,
     maxResults = 12,
   }: {
-    query: string;
+    queryState: string;
     maxResults?: number;
   }) => {
     const response = await axios.get(
@@ -32,7 +32,7 @@ export const fetchVideos = createAsyncThunk(
       {
         params: {
           part: "snippet",
-          q: query,
+          q: queryState,
           key: YOUTUBE_API_KEY,
           maxResults: maxResults,
           type: "video",
@@ -58,7 +58,7 @@ export const fetchVideos = createAsyncThunk(
         const videoData = videoResponse.data.items[0];
 
         return {
-          query,
+          queryState,
           id: videoId,
           title: item.snippet.title,
           channelTitle: item.snippet.channelTitle,

@@ -1,7 +1,7 @@
 import cls from "./SearchResult.module.scss";
 import React, { useState } from "react";
-import { ResultBar } from "@components/ResultBar/ResultBar.tsx";
-import { ResultList } from "@components/ResultList/ResultList.tsx";
+import { ResultBar } from "@components/SearchComponents/ResultBar/ResultBar.tsx";
+import { ResultList } from "@components/SearchComponents/ResultList/ResultList.tsx";
 
 export const SearchResult: React.FC = () => {
   const [isGrid, setIsGrid] = useState<boolean>(true);

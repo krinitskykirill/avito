@@ -1,5 +1,5 @@
 @import "@assets/styles/mixins";
-@import "@assets/styles/variables";
+@import '@assets/styles/variables';
 
 
 .search__bar__idle {
@@ -13,6 +13,10 @@
   @extend .search__bar__idle;
   align-items: flex-start;
   padding-top: 4rem;
+}
+
+.input__container {
+  position: relative;
 }
 
 .title {
@@ -33,6 +37,7 @@
 }
 
 .input__succeeded {
+  position: relative;
   @extend .input__idle;
   width: 89rem;
   @media (max-width: 1024px) {
@@ -42,7 +47,7 @@
 
 .button {
   width: 15rem;
-  height: 5.2rem;
+  height: 5.21rem;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   border-left: none;
@@ -50,11 +55,15 @@
 
 
 @media (max-width: 767px) {
-
   .input__idle,
   .input__succeeded {
     width: 21.3rem;
     font-size: 1.6rem;
+  }
+
+  .input__idle::placeholder,
+  .input__succeeded::placeholder {
+    color: transparent;
   }
 
   .button {

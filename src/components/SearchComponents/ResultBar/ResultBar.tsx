@@ -22,7 +22,7 @@ export const ResultBar: React.FC<ResultBarProps> = ({
   if (status !== "succeeded") return null;
   if (videos.length === 0) return null;
 
-  const request = videos[0]?.query ?? "";
+  const request = videos[0]?.queryState ?? "";
   const count = videos[0]?.viewCount ?? "";
 
   return (

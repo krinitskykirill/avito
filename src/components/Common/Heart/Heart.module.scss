@@ -1,0 +1,22 @@
+.heart__container {
+  position: absolute;
+  background: none;
+  left: 84rem;
+  top: 25%;
+
+  @media (max-width: 1024px) {
+    left: 49rem;
+  }
+  @media (max-width: 767px) {
+    left: 17rem;
+  }
+}
+
+.heart {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.idle {
+  display: none;
+}
