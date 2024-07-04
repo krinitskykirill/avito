@@ -9,7 +9,7 @@ interface HeartProps {
 export const Heart: React.FC<HeartProps> = ({ isIdle }) => {
   return (
     <button className={isIdle ? cls.idle : cls.heart__container}>
-      <img className={cls.heart} src={heart}></img>
+      <img alt={""} className={cls.heart} src={heart}></img>
     </button>
   );
 };
